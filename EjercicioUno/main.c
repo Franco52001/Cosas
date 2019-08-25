@@ -3,157 +3,61 @@
 
 int main()
 {
-    int edad;
+    float numeroUno;
 
-    float altura;
-
-    char sexo;
-
-    char seguir;
-    seguir = 's';
-
-    float alturaM;
-
-    float alturaMJ;
-
-    float alturaMV;
-
-    float alturaMB;
-
-    float alturaH;
-
-    int edadM;
-
-    int edadMJ;
-
-    int edadMV;
-
-    int edadMB;
-
-    fflush(stdin);
-
-    char sexoMA;
-
-    int contador;
-    contador = 0;
-
-    int contadorMV;
-    contadorMV = 0;
-
-    int contadorMB;
-    contadorMB = 0;
-
-    int contadorAH;
-    contadorAH = 0;
-
-    int acumuladorE;
-    acumuladorE = 0;
-
-    int acumuladorAH;
-    acumuladorAH = 0;
-
-    float promedioE;
-
-    float promedioAH;
+    float numeroDos;
 
 
+    printf("Ingrese dos numeros \n");
+    scanf("%f", &numeroUno);
+    scanf("%f", &numeroDos);
 
-    do{
-    printf("Ingrese su edad\n");
-    scanf("%d" , &edad);
-    while(edad < 0 || edad > 110){
-        printf("Numero no valido\n");
-        scanf("%d" , &edad);
-
+    float resultadoS;
+    resultadoS = numeroUno + numeroDos;
+    float resultadoN;
+    resultadoN = numeroUno - numeroDos;
+    float resultadoM;
+    resultadoM = numeroUno * numeroDos;
+    float resultadoD;
+    if(numeroDos !=0)
+    {
+        resultadoD = numeroUno / numeroDos;
     }
 
-    printf("Ingrese su altura\n");
-    scanf("%f", &altura);
-    while(altura > 2 || altura < 1){
-        printf("Numero no valido\n");
-        scanf("%f" , &altura);
+    float factorialA;
+    factorialA = 1;
+    float resultadoFuno;
+    for(float factorialUno = numeroUno ; factorialUno > 0; factorialUno--)
+    {
+        factorialA = factorialA * factorialUno;                                        // 1 = 4* 1 -----> 4 = 4 * 3 -----> 12 = 12 * 2 ----> 24 = 24 *
     }
+    resultadoFuno = factorialA;
 
-    fflush(stdin);
-
-    printf("Ingrese su sexo(f/m)\n");
-    scanf("%c", &sexo);
-
-    if(contador == 0){
-        alturaM = altura;
-        alturaMJ = altura;
-        edadM = edad;
-        edadMJ = edad;
-        sexoMA = sexo;
+    float factorialB;
+    factorialB = 1;
+    float resultadoFdos;
+    for(float factorialDos = numeroDos ; factorialDos > 0; factorialDos--)
+    {
+        factorialB = factorialB * factorialDos;
 
     }
-    if(contadorMV== 0 && sexo == 'f' || sexo == 'F'){
-        alturaMV = altura;
-        edadMV = edad;
-        contadorMV++;
+    resultadoFdos = factorialB;
+
+    printf("La suma de %f y %f es %f \n", numeroUno,numeroDos,resultadoS);
+    printf("La resta de %f y %f es %f \n", numeroUno,numeroDos,resultadoN);
+    printf("La multiplicacion de %f y %f es %f \n", numeroUno,numeroDos,resultadoM);
+    if(numeroDos !=0)
+    {
+        printf("La division de %f y %f es %f \n", numeroUno,numeroDos,resultadoD);
     }
-    if(contadorMB == 0 && sexo == 'm' || sexo == 'M'){
-        edadMB = edad;
-        alturaMB = altura;
-        contadorMB++;
+    else
+    {
+        printf("No es posible dividir por cero \n");
     }
-    contador++;
-
-    if(edad > edadMV && sexo == 'f' || sexo == 'F'){
-        alturaMV = altura;
-        edadMV  = edad;
-    }
+    printf("El factorial de %f es %f y el factorial de %f es %f \n", numeroUno,resultadoFuno,numeroDos,resultadoFdos);
 
 
-    if(edad < edadMJ){
-       alturaMJ = altura;
-       edadMJ = edad;
-    }
-
-    if(altura > alturaM){
-        alturaM  = altura;
-        sexoMA = sexo;
-    }
-
-    if(altura < alturaMB && sexo == 'm'|| sexo == 'M'){
-        edadMB = edad;
-        alturaMB = altura;
-    }
-
-    if(sexo == 'm'|| sexo == 'M'){
-        alturaH = altura;
-        contadorAH++;
-        acumuladorAH = acumuladorAH + alturaH;
-    }
-
-    acumuladorE = acumuladorE + edad;
 
 
-    fflush(stdin);
-    printf("Desea seguir?(s/n)\n");
-    scanf("%c", &seguir);
 
-
-    }while(seguir == 's'|| seguir == 'S');
-
-    if(contador !=0){
-    promedioE = acumuladorE/contador;
-    }
-    if(contadorAH !=0){
-    promedioAH = acumuladorAH/contadorAH;
-    }
-
-    printf("La altura de la mujer mas vieja es:%f\n" , alturaMV);
-
-    printf("La altura de la persona mas joven es:%f\n", alturaMJ);
-
-    printf("El sexo de la persona mas alta es:%c\n", sexoMA);
-
-    printf("La edad del hombre mas bajo es:%d\n", edadMB);
-
-    printf("El promedio de todas las edades es:%f\n", promedioE);
-
-    printf("El promedio de la altura de los hombres es:%f\n", promedioAH);
-
-    return 0;
 }
