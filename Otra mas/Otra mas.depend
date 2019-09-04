@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1567618934 source:c:\users\franco\desktop\programacion\codigo c\otra mas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"1.h"
+
+1567618641 c:\users\franco\desktop\programacion\codigo c\otra mas\1.h
+	<stdio.h>
+
+1567618641 source:c:\users\franco\desktop\programacion\codigo c\otra mas\1.c
+	"1.h"
+
