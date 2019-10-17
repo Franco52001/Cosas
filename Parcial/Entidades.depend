@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1571330218 source:c:\users\alumno\desktop\entidades\biblioteca.c
+	"Biblioteca.h"
+
+1571331232 c:\users\alumno\desktop\entidades\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1571331187 source:c:\users\alumno\desktop\entidades\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Biblioteca.h"
+
