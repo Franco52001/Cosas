@@ -13,3 +13,19 @@
 	<string.h>
 	"Biblioteca.h"
 
+1571282406 source:c:\users\franco\desktop\programacion\codigo c\entidades\biblioteca.c
+	"Biblioteca.h"
+
+1571282427 c:\users\franco\desktop\programacion\codigo c\entidades\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1571282360 source:c:\users\franco\desktop\programacion\codigo c\entidades\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Biblioteca.h"
+
